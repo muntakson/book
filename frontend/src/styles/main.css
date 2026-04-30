@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for terminal-like output */
+.terminal-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+.terminal-output::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+/* Phase indicator styles */
+.phase-indicator {
+  @apply flex items-center justify-center w-8 h-8 rounded-full text-sm font-medium;
+}
+
+.phase-indicator.completed {
+  @apply bg-green-500 text-white;
+}
+
+.phase-indicator.active {
+  @apply bg-blue-500 text-white ring-4 ring-blue-200;
+}
+
+.phase-indicator.pending {
+  @apply bg-gray-200 text-gray-500;
+}

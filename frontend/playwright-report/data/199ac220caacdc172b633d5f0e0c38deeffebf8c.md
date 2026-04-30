@@ -1,0 +1,145 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - heading "시팅벅 실험 자동화" [level=1] [ref=e3]
+  - generic [ref=e4]:
+    - button "Connect" [ref=e5] [cursor=pointer]
+    - button "Disconnect" [disabled] [ref=e6]
+    - button "Clear" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]: Disconnected
+  - generic [ref=e9]:
+    - button "Sensor" [ref=e10] [cursor=pointer]
+    - button "Jog" [ref=e11] [cursor=pointer]
+    - button "Experiment" [ref=e12] [cursor=pointer]
+    - button "Analysis" [ref=e13] [cursor=pointer]
+    - button "Setting" [ref=e14] [cursor=pointer]
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - heading "Live Sensor Monitor" [level=3] [ref=e17]
+      - generic [ref=e18]:
+        - button "Start" [ref=e19] [cursor=pointer]
+        - button "Stop" [disabled] [ref=e20]
+        - generic [ref=e21]: Stopped
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: Seat Horizontal
+          - generic [ref=e26]: R1 / ADC0
+        - generic [ref=e27]: "--"
+        - generic [ref=e29]:
+          - generic [ref=e30]: "0"
+          - generic [ref=e31]: "4095"
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: Seat Vertical
+          - generic [ref=e35]: R2 / ADC1
+        - generic [ref=e36]: "--"
+        - generic [ref=e38]:
+          - generic [ref=e39]: "0"
+          - generic [ref=e40]: "4095"
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: Cushion Angle
+          - generic [ref=e44]: R3 / ADC2
+        - generic [ref=e45]: "--"
+        - generic [ref=e47]:
+          - generic [ref=e48]: "0"
+          - generic [ref=e49]: "4095"
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: Cushion Distance
+          - generic [ref=e53]: R4 / ADC3
+        - generic [ref=e54]: "--"
+        - generic [ref=e56]:
+          - generic [ref=e57]: "0"
+          - generic [ref=e58]: "4095"
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: Back Angle
+          - generic [ref=e62]: R5 / ADC4
+        - generic [ref=e63]: "--"
+        - generic [ref=e65]:
+          - generic [ref=e66]: "0"
+          - generic [ref=e67]: "4095"
+    - generic [ref=e68]:
+      - text: "Raw Response:"
+      - code [ref=e69]: "--"
+  - generic [ref=e70]: "[Web Serial API ready. Click Connect to start.] [Jog] Loaded saved limits from database"
+  - generic [ref=e71]:
+    - textbox "Enter command and press Enter..." [disabled] [ref=e72]
+    - button "Send" [disabled] [ref=e73]
+  - generic [ref=e74]:
+    - heading "Sensor / ADC Mapping" [level=3] [ref=e75]
+    - table [ref=e76]:
+      - rowgroup [ref=e77]:
+        - row "Sensor ADC GPIO Movement 1 Cmd Movement 2 Cmd" [ref=e78]:
+          - columnheader "Sensor" [ref=e79]
+          - columnheader "ADC" [ref=e80]
+          - columnheader "GPIO" [ref=e81]
+          - columnheader "Movement 1" [ref=e82]
+          - columnheader "Cmd" [ref=e83]
+          - columnheader "Movement 2" [ref=e84]
+          - columnheader "Cmd" [ref=e85]
+        - row "1 CH0 PA0 Seat Fwd q Seat Bwd 1" [ref=e86]:
+          - cell "1" [ref=e87]
+          - cell "CH0" [ref=e88]
+          - cell "PA0" [ref=e89]
+          - cell "Seat Fwd" [ref=e90]
+          - cell "q" [ref=e91]
+          - cell "Seat Bwd" [ref=e92]
+          - cell "1" [ref=e93]
+        - row "2 CH1 PA1 Seat Up w Seat Down 2" [ref=e94]:
+          - cell "2" [ref=e95]
+          - cell "CH1" [ref=e96]
+          - cell "PA1" [ref=e97]
+          - cell "Seat Up" [ref=e98]
+          - cell "w" [ref=e99]
+          - cell "Seat Down" [ref=e100]
+          - cell "2" [ref=e101]
+        - row "3 CH2 PA2 Cushion Up e Cushion Down 3" [ref=e102]:
+          - cell "3" [ref=e103]
+          - cell "CH2" [ref=e104]
+          - cell "PA2" [ref=e105]
+          - cell "Cushion Up" [ref=e106]
+          - cell "e" [ref=e107]
+          - cell "Cushion Down" [ref=e108]
+          - cell "3" [ref=e109]
+        - row "4 CH4 PA4 Cushion Fwd r Cushion Bwd 4" [ref=e110]:
+          - cell "4" [ref=e111]
+          - cell "CH4" [ref=e112]
+          - cell "PA4" [ref=e113]
+          - cell "Cushion Fwd" [ref=e114]
+          - cell "r" [ref=e115]
+          - cell "Cushion Bwd" [ref=e116]
+          - cell "4" [ref=e117]
+        - row "5 CH5 PA5 Back Bwd t Back Fwd 5" [ref=e118]:
+          - cell "5" [ref=e119]
+          - cell "CH5" [ref=e120]
+          - cell "PA5" [ref=e121]
+          - cell "Back Bwd" [ref=e122]
+          - cell "t" [ref=e123]
+          - cell "Back Fwd" [ref=e124]
+          - cell "5" [ref=e125]
+    - heading "Available Commands" [level=3] [ref=e126]
+    - table [ref=e127]:
+      - rowgroup [ref=e128]:
+        - row "a / A Red LED ON / OFF" [ref=e129]:
+          - cell "a / A" [ref=e130]
+          - cell "Red LED ON / OFF" [ref=e131]
+        - row "b / B Blue LED ON / OFF" [ref=e132]:
+          - cell "b / B" [ref=e133]
+          - cell "Blue LED ON / OFF" [ref=e134]
+        - row "c Read ADC channels 1-6 (CSV)" [ref=e135]:
+          - cell "c" [ref=e136]
+          - cell "Read ADC channels 1-6 (CSV)" [ref=e137]
+        - row "1-5 Relay 1-5 CW (auto-off 1s)" [ref=e138]:
+          - cell "1-5" [ref=e139]
+          - cell "Relay 1-5 CW (auto-off 1s)" [ref=e140]
+        - row "q,w,e,r,t Relay 1-5 CCW (auto-off 1s)" [ref=e141]:
+          - cell "q,w,e,r,t" [ref=e142]
+          - cell "Relay 1-5 CCW (auto-off 1s)" [ref=e143]
+        - row "0 All relays OFF" [ref=e144]:
+          - cell "0" [ref=e145]
+          - cell "All relays OFF" [ref=e146]
+```

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+.env
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build outputs
+frontend/dist/
+
+# Database
+*.db
+*.sqlite
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+nohup.out
+
+# Test files
+test_venv/
+
+# Generated user content
+backend/output/
+backend/voice_files/
+
+# Audio / transcript artifacts
+*.wav
+*.mp3
+*.m4a
